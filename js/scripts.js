@@ -168,6 +168,6 @@ ValidityidChecker("123456a8")
 
 //Abby encontró una combinación de caja fuerte que parece ser un número de 4 dígitos. Quiere probar combinaciones aleatorias hasta encontrar una que termine en 7. Crea una función que genere un número de 4 dígitos que termine en 7.
 const  safeBoxCombinationCode = combinationcode => {
-    const fourdigits = combinationcode.length === 4 + combinationcode.Math.random(0,9) + combinationcode.endsWith(7);
-    console.log(fourdigits)
+    const fourdigits = combinationcode.Math.random() * 1000;
+    console.log(fourdigits.endsWith(7))
 }
