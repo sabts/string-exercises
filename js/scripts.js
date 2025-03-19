@@ -59,7 +59,7 @@ abbySecretMessege('xoxo','gossip Girl')
 // Camila quiere asegurarse de que un número de teléfono tiene el formato correcto. Debe tener exactamente 9 caracteres. Crea una función que reciba un número como string y determine si es válido o no.
 const camilaPhoneNumber = phoneNumber => {
     const number = '0123456789'
-    if(number.includes(phoneNumber.charAt(0)) === phoneNumber.charAt(0) && phoneNumber.length === 9){console.log('Número válido')
+    if(number.includes(phoneNumber.charAt(0)) && phoneNumber.length === 9){console.log('Número válido')
 
     } else {
         console.log('Número inválido')
@@ -68,3 +68,20 @@ const camilaPhoneNumber = phoneNumber => {
 camilaPhoneNumber("123456789")
 camilaPhoneNumber("a23456789")
 camilaPhoneNumber("12345678")
+
+//Bego está eligiendo un dominio para su nueva web. Si la web termina en ".com", se usará para negocios. Si termina en ".org", será para una organización. Si no es ninguno de estos, el dominio no es válido. Crea una función que reciba un dominio y determine su clasificación.
+const begoWebSite = websiteName => {
+    if(websiteName.endsWith('.com')){console.log('Bego tiene un dominio de negocio')
+    }  else if(websiteName.endsWith('.org')){console.log('Bego tiene un dominio de organización')} else {console.log('Dominio no válido')}
+}
+begoWebSite('begoweb.com')
+begoWebSite('begoweb.net')
+begoWebSite('begoweb.org')
+
+//Sabrina está revisando una lista de palabras. Si una palabra contiene la letra "z", la marcará como especial. Si no, será una palabra común. Crea una función que reciba una palabra y determine su categoría.
+const sabrinaZwordList = wordWithZ => {
+    if(wordWithZ.toLowerCase().includes('z')) {console.log('Palabra especial')} else {console.log('Palabra común')}
+}
+sabrinaZwordList('Zapatero')
+sabrinaZwordList('zombie')
+sabrinaZwordList('reciclar')
