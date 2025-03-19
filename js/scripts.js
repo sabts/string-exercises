@@ -120,3 +120,24 @@ begomessagefilter('eres Tonto como una Piedra')
 begomessagefilter('Vivan los churros y el chocolate!')
 
 //Sabrina quiere imprimir etiquetas con iniciales. Crea una función que reciba un nombre y un apellido y devuelva sus iniciales en mayúsculas, separadas por un punto.
+const initialLabels = (name,lastname) => {
+    const nameInitial = name.charAt(0).toUpperCase()
+    const lastnameInitial = lastname.charAt(0).toUpperCase()
+    console.log(nameInitial + '.' + lastnameInitial)
+}
+initialLabels('sabrina', 'taraschi')
+initialLabels('taylor', 'swift')
+
+//Macarena está diseñando una campaña publicitaria. Si el título del anuncio tiene más de 20 caracteres, lo reducirá. Si tiene 20 o menos, lo usará tal cual. Crea una función que reciba un título y determine si debe ajustarse.
+const advertisingCampaignTitle = campaingTitle => {
+    if(campaingTitle.length <= 20) {console.log(campaingTitle)} else {console.log(campaingTitle.substring(0,20) + '...')}
+}
+advertisingCampaignTitle('Perfoming live! In Madrid. The short n` Sweet Tour')
+advertisingCampaignTitle('short n` Sweet')
+
+//Abby encontró una radio funcionando con interferencias. Si la señal incluye la palabra "ayuda" o "suministros", significa que alguien está pidiendo asistencia. Si no contiene estas palabras, lo ignorará. Crea una función que reciba un mensaje de radio y determine si Abby debe responder.
+const radioInterfaceCode = radioCode => {
+    if(radioCode.toLowerCase().includes('ayuda') || radioCode.toLowerCase().includes('suministros')){console.log('mensaje de ayuda')} else {console.log('ignorar')}
+    }
+radioInterfaceCode('ya no quiero pensar más ayuda')
+radioInterfaceCode('ya llegaron los ZOMBIES!')
