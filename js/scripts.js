@@ -139,7 +139,7 @@ advertisingCampaignTitle('short n` Sweet')
 const radioInterfaceCode = radioCode => {
     if(radioCode.toLowerCase().includes('ayuda') || radioCode.toLowerCase().includes('suministros')){console.log('mensaje de ayuda')} else {console.log('ignorar')}
     }
-radioInterfaceCode('ya no quiero pensar más ayuda')
+radioInterfaceCode('Ayuda! ya no quiero pensar más')
 radioInterfaceCode('ya llegaron los ZOMBIES!')
 
 //Camila quiere asegurarse de que los nombres de usuario no contengan espacios. Si un nombre tiene espacios, será inválido. Si no tiene, será aceptado. Crea una función que reciba un nombre de usuario y determine su validez.
@@ -157,3 +157,17 @@ emailValidityChecker('sabrina@gmailcom')
 emailValidityChecker('sabrina@gmail.com')
 
 //Macarena está validando números de identificación. Si un número tiene exactamente 8 caracteres y termina en una letra, será válido. Si no cumple estas condiciones, será inválido. Crea una función que reciba un número de identificación y determine si es correcto.
+const ValidityidChecker = identification =>{
+    const alphabet = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'
+    if(identification.length === 8 && alphabet.includes(identification.charAt(identification.length -1)).toLowerCase()){console.log('Identificación válida')} 
+    else {console.log('Identificación inválida')}
+}
+ValidityidChecker("12345678A")
+ValidityidChecker("12345678a")
+ValidityidChecker("123456a8")
+
+//Abby encontró una combinación de caja fuerte que parece ser un número de 4 dígitos. Quiere probar combinaciones aleatorias hasta encontrar una que termine en 7. Crea una función que genere un número de 4 dígitos que termine en 7.
+const  safeBoxCombinationCode = combinationcode => {
+    const fourdigits = combinationcode.length === 4 + combinationcode.Math.random(0,9) + combinationcode.endsWith(7);
+    console.log(fourdigits)
+}
