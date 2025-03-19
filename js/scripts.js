@@ -1,3 +1,4 @@
 const nameLenghtDetector = (name) =>{
-    name = name >= 7 ? 'Nombre largo' : 'Nombre corto';
+  return name.lenght >= 7 ? 'Nombre largo' : 'Nombre corto';
 }
+console.log (nameLenghtDetector.lenght (Ana))
