@@ -85,3 +85,38 @@ const sabrinaZwordList = wordWithZ => {
 sabrinaZwordList('Zapatero')
 sabrinaZwordList('zombie')
 sabrinaZwordList('reciclar')
+
+//Macarena está clasificando documentos según su urgencia. Si un mensaje contiene la palabra "urgente" en cualquier parte, lo priorizará. Si no, será un mensaje normal. Crea una función que reciba un mensaje y determine su nivel de prioridad.
+const macarenaPriorityUrgentMessage = messages => {
+    if(messages.toLowerCase().includes('urgente')) {console.log('Prioridad alta: mensaje urgente')}
+    else {console.log('prioridad baja: mensaje normal')}
+}
+macarenaPriorityUrgentMessage('asunto:ejercicios con strings')
+macarenaPriorityUrgentMessage('asunto Urgente:ejercicios con strings')
+
+//Abby encontró una nota con un código en una casa abandonada. Si el código es un número par y tiene exactamente 4 dígitos, puede ser la combinación de una caja fuerte. Si es impar o tiene otra longitud, lo descartará. Crea una función que reciba un código y determine si Abby debe investigarlo.
+const abbyNoteCode = code =>{
+    if(code.length === 4 && code % 2 === 0){
+        console.log('posible código')}
+         else {console.log('como este ejercicio, el código no sirve')}
+    }
+abbyNoteCode('2222')
+abbyNoteCode('222')
+abbyNoteCode('2223')
+
+//Camila está revisando invitaciones para un evento. Si el nombre del invitado empieza con "A", "E", "I", "O" o "U", se le asignará una mesa especial. Si empieza con otra letra, se le asignará una mesa normal. Crea una función que reciba un nombre y determine su ubicación.
+const camilaInvitationtable = guestName => {
+    const firstLetter = 'AEIOU'
+    if(firstLetter.includes(guestName.charAt())){console.log('Ubicación:mesa especial')} else {console.log('Ubicación:mesa normal')}
+}
+camilaInvitationtable('Alejandro')
+camilaInvitationtable('Roberto')
+
+//Bego está verificando si un texto contiene lenguaje ofensivo. Si un mensaje contiene la palabra "tonto" o "feo", se marcará como inapropiado. Si no, será aceptado. Crea una función que reciba un mensaje y determine su categoría.
+const begomessagefilter = message => {
+    if(message.toLowerCase().includes('tonto') || message.toLowerCase().includes('feo')) {console.log('mensaje inapropiado')} else{console.log('se ve el mensaje')}
+}
+begomessagefilter('eres Tonto como una Piedra')
+begomessagefilter('Vivan los churros y el chocolate!')
+
+//Sabrina quiere imprimir etiquetas con iniciales. Crea una función que reciba un nombre y un apellido y devuelva sus iniciales en mayúsculas, separadas por un punto.
