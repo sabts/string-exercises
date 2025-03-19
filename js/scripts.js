@@ -141,3 +141,19 @@ const radioInterfaceCode = radioCode => {
     }
 radioInterfaceCode('ya no quiero pensar más ayuda')
 radioInterfaceCode('ya llegaron los ZOMBIES!')
+
+//Camila quiere asegurarse de que los nombres de usuario no contengan espacios. Si un nombre tiene espacios, será inválido. Si no tiene, será aceptado. Crea una función que reciba un nombre de usuario y determine su validez.
+const usernameValidityChecker = username =>{
+    if(username.includes(' ')) {console.log('Nombre de usuario inválido')} else {console.log('Nombre de usuario válido')}
+} 
+usernameValidityChecker('s   a   b   r   i   n   a')
+usernameValidityChecker('sabrina')
+
+//Bego está registrando nuevas cuentas de clientes. Si un correo electrónico contiene "@" y ".", será válido. Si no tiene alguno de estos elementos, será inválido. Crea una función que reciba un email y determine si es correcto.
+const emailValidityChecker = electronicMail => {
+    if(electronicMail.includes('@') && electronicMail.includes('.')){console.log('Correo electrónico válido')} else {console.log('Correo electrónico inválido')}
+}
+emailValidityChecker('sabrina@gmailcom')
+emailValidityChecker('sabrina@gmail.com')
+
+//Macarena está validando números de identificación. Si un número tiene exactamente 8 caracteres y termina en una letra, será válido. Si no cumple estas condiciones, será inválido. Crea una función que reciba un número de identificación y determine si es correcto.
