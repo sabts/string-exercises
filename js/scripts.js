@@ -277,7 +277,8 @@ listOfGrammaticalVerbs ('Enloquecer')
 
 //24.Abby encontró una caja cerrada con un código de 5 números. Solo uno de cada 5 intentos abrirá la caja. Crea una función que simule 5 intentos y muestre si en alguno se abre la caja o no.
 const codeToOpenTheBox = () =>{
-  const fiveDigitsCode = Math.floor(Math.random()*10)
+  const fiveDigitsCode = Math.floor(Math.random()*10);
+  const codeLength = fiveDigitsCode.length !==5;
 }// I need somebody, HELP! not just anybody, HELP! ou know I need someone, HEEEEEEELP
 
 //25.Camila quiere generar una clave secreta para una nueva cuenta. La clave debe tener un número aleatorio entre 100 y 999 y una letra aleatoria entre "A" y "Z". Crea una función que genere una clave con ese formato.
@@ -323,8 +324,20 @@ const longSentenceDivider = (sentence) => {
 
 //29.Sabrina está encriptando mensajes secretos. Sabe que todos los mensajes deben tener 4 letras y quiere que cada letra de una palabra se sustituya por la siguiente en el abecedario (por ejemplo, "hola" se convertiría en "ipmb"). Si la letra es "z" o "Z", debe convertirse en "a" o "A" respectivamente. Crea una función que realice esta transformación en una palabra.
 const  encryptingSecretMessages = (secretMessage) => {
-  const alphabet = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
-  const encrypGenerator = secretMessage.(alphabet.charAt(alphabet.length - 1));
-  if(secretMessage.length === 4){console.log(encrypGenerator)} else{console.log('El mensaje debe tener 4 letras')}
+const alphabet = "abcdefghijklmnñopqrstuvwxyz";
+const encrypGenerator = alphabet.charAt(length-1) ;
+if(secretMessage.length === 4){console.log(encrypGenerator(secretMessage))} else{console.log('El mensaje debe tener 4 letras')}
 }
-encryptingSecretMessages ('HOLA')
+encryptingSecretMessages ('hola')
+
+
+//30. Bego necesita verificar si dos palabras de 4 letras son palíndromos (es decir, si lee igual de derecha a izquierda y de izquierda a derecha, como "amor" y "roma"). Crea una función que determine si dos palabras son palíndromos.
+const  palindromeChecker = (word1, word2) =>{
+  if(word1.length === 4 && word2.length===4 
+    && word1.charAt(0) === word2.charAt(3) 
+    && word1.charAt(1) === word2.charAt(2) 
+    && word1.charAt(2) === word2.charAt(1) 
+    && word1.charAt(3) === word2.charAt(0)) {console.log('Las palabras son palíndromas')} 
+    else{console.log('Las palabras no son palíndromas')}
+}
+palindromeChecker('amor','roma')
