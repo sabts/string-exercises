@@ -320,3 +320,11 @@ const longSentenceDivider = (sentence) => {
   }
   longSentenceDivider('I just wanted you to know, That this is me trying')
   longSentenceDivider('At least Im trying')
+
+//29.Sabrina está encriptando mensajes secretos. Sabe que todos los mensajes deben tener 4 letras y quiere que cada letra de una palabra se sustituya por la siguiente en el abecedario (por ejemplo, "hola" se convertiría en "ipmb"). Si la letra es "z" o "Z", debe convertirse en "a" o "A" respectivamente. Crea una función que realice esta transformación en una palabra.
+const  encryptingSecretMessages = (secretMessage) => {
+  const alphabet = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+  const encrypGenerator = secretMessage.(alphabet.charAt(alphabet.length - 1));
+  if(secretMessage.length === 4){console.log(encrypGenerator)} else{console.log('El mensaje debe tener 4 letras')}
+}
+encryptingSecretMessages ('HOLA')
